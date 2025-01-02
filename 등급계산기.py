@@ -55,6 +55,12 @@ for name, score in name_score.items():
 # 전체 평균 출력 구현하고 "평균 출력 구현"이라는 제목으로 commit
 ################################## < TO DO > ##################################
 
+total = 0
+for value in name_score.values():
+  total += value
+average = total / len(name_score)
+
+print("Average: " + str(average))
 
 ###############################################################################
 
