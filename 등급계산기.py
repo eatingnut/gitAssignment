@@ -35,6 +35,17 @@ if __name__=="__main__":
 # "등급 출력 구현"이라는 제목으로 commit
 ################################## < TO DO > ##################################
     
+for name, score in name_score.items():
+  if score >= 90:
+    print(name + ": A")
+  elif score >= 80:
+    print(name + ": B")
+  elif score >= 70:
+    print(name + ": C")
+  elif score >= 60:
+    print(name + ": D")
+  else:
+    print(name + ": F")  
 
 
 ###############################################################################
