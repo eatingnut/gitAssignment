@@ -35,25 +35,36 @@ if __name__=="__main__":
 # "등급 출력 구현"이라는 제목으로 commit
 ################################## < TO DO > ##################################
     
-for name, score in name_score.items():
-  if score >= 90:
-    print(name + ": A")
-  elif score >= 80:
-    print(name + ": B")
-  elif score >= 70:
-    print(name + ": C")
-  elif score >= 60:
-    print(name + ": D")
-  else:
-    print(name + ": F")  
+    for name, score in name_score.items():
+      if score >= 90:
+        print(name + ": A")
+      elif score >= 80:
+        print(name + ": B")
+      elif score >= 70:
+        print(name + ": C")
+      elif score >= 60:
+        print(name + ": D")
+      else:
+        print(name + ": F")  
 
 
 ###############################################################################
 
-
 # [mission 2] 
 # 전체 평균 출력 구현하고 "평균 출력 구현"이라는 제목으로 commit
 ################################## < TO DO > ##################################
+
+    value_list=[]
+    median = 0
+
+    for value in name_score.values():
+      value_list.append(value)
+    value_list.sort()
+    if (len(value_list) % 2) == 1:
+      median = value_list[(len(value_list)-1)//2]
+    else:
+      median = (value_list[len(value_list)//2] + value_list[(len(value_list)//2)-1])/2
+    print("Median: " + str(median))
 
 
 ###############################################################################
@@ -81,12 +92,8 @@ for name, score in name_score.items():
 # "Min,Max 출력 구현" 라는 제목으로 commit
 ################################## < TO DO > ##################################
     
-
-
-
-
-
-
+    print("Min: " + str(value_list[0]))
+    print("Max: " + str(value_list[-1]))
     
 ###############################################################################
 
